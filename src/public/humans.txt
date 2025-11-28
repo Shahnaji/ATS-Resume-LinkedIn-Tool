@@ -1,0 +1,15 @@
+/* TEAM */
+  Website: ATS Resume Optimizer
+  Location: United States
+
+/* THANKS */
+  Thanks to all contributors and users who helped improve this tool
+
+/* SITE */
+  Standards: HTML5, CSS3, JavaScript ES6+
+  Components: React, TypeScript, Tailwind CSS
+  Software: VS Code, Figma
+  APIs: Grok AI, Supabase
+  Performance: Core Web Vitals Optimized
+  SEO: 100% AEO Optimized
+  Last update: 2025/11/27

@@ -1,0 +1,15 @@
+# Netlify/Vercel redirects and rewrites
+
+# SPA fallback - redirect all non-existent paths to index.html for client-side routing
+/*    /index.html   200
+
+# Force HTTPS
+http://:domain.com/*    https://:domain.com/:splat   301!
+
+# Redirect common typos and old URLs (if any)
+/resume-checker    /#features    301
+/linkedin-checker    /#linkedin    301
+/how-it-works    /#how-it-works    301
+
+# API proxying (if needed)
+/api/*    https://PROJECT_ID.supabase.co/functions/v1/make-server-87342172/:splat    200

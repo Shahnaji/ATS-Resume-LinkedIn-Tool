@@ -1,0 +1,44 @@
+# Security Headers for ATS Resume Optimizer
+# Compatible with Netlify, Vercel, and other hosting platforms
+
+/*
+  # Security
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  X-XSS-Protection: 1; mode=block
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), interest-cohort=()
+  
+  # Content Security Policy
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https: blob:; connect-src 'self' https://*.supabase.co https://api.x.ai; frame-ancestors 'none'; base-uri 'self'; form-action 'self';
+  
+  # HSTS (HTTP Strict Transport Security)
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  
+  # Cache Control
+  Cache-Control: public, max-age=0, must-revalidate
+
+# Static assets cache
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/icon-*.png
+  Cache-Control: public, max-age=31536000, immutable
+
+# Service worker
+/sw.js
+  Cache-Control: public, max-age=0, must-revalidate
+
+# Manifest
+/manifest.json
+  Cache-Control: public, max-age=86400
+  Content-Type: application/manifest+json
+
+# Sitemap and robots
+/sitemap.xml
+  Cache-Control: public, max-age=3600
+  Content-Type: application/xml
+
+/robots.txt
+  Cache-Control: public, max-age=3600
+  Content-Type: text/plain
