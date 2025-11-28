@@ -1,0 +1,32 @@
+# Robots.txt for ATS Resume Optimizer
+# Allow all search engines to crawl the site
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://atsresumeoptimizer.com/sitemap.xml
+
+# Humans.txt location
+# http://humanstxt.org/
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Specific rules for major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Disallow access to backend and API endpoints
+User-agent: *
+Disallow: /api/
+Disallow: /supabase/
+Disallow: /loading
+Disallow: /results
+
