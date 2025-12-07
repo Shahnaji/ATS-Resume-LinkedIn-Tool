@@ -52,6 +52,13 @@ export function Header() {
             >
               LinkedIn
             </a>
+            <Link
+              to="/pricing"
+              className="text-[14px] text-gray-700 hover:text-[#16BAC5] transition-colors"
+              style={{ fontWeight: 500 }}
+            >
+              Pricing
+            </Link>
             <a
               href="#how-it-works"
               className="text-[14px] text-gray-700 hover:text-[#16BAC5] transition-colors"
