@@ -10,6 +10,8 @@ const PrivacyPage = lazy(() => import("./pages/PrivacyPage").then(module => ({ d
 const TermsPage = lazy(() => import("./pages/TermsPage").then(module => ({ default: module.TermsPage })));
 const ContactPage = lazy(() => import("./pages/ContactPage").then(module => ({ default: module.ContactPage })));
 const NotFoundPage = lazy(() => import("./pages/NotFoundPage").then(module => ({ default: module.NotFoundPage })));
+const RefundPage = lazy(() => import("./pages/RefundPage").then(module => ({ default: module.RefundPage })));
+const PricingPage = lazy(() => import("./pages/PricingPage").then(module => ({ default: module.PricingPage })));
 
 // Minimal loading fallback for route transitions
 function RouteLoadingFallback() {
@@ -31,6 +33,8 @@ export default function App() {
           <Route path="/privacy" element={<PrivacyPage />} />
           <Route path="/terms" element={<TermsPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/refund" element={<RefundPage />} />
+          <Route path="/pricing" element={<PricingPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </Suspense>
